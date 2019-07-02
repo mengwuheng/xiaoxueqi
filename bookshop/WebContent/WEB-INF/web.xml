@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>bookshop</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>CurrentTime</servlet-name>
+    <servlet-class>cn.edu.nsu.bookshop.servlet.CurrentTime</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CurrentTime</servlet-name>
+    <url-pattern>/CurrentTime</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Table</servlet-name>
+    <servlet-class>cn.edu.nsu.bookshop.servlet.Table</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Table</servlet-name>
+    <url-pattern>/Table</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UserListServlet</servlet-name>
+    <servlet-class>cn.edu.nsu.bookshop.servlet.UserListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserListServlet</servlet-name>
+    <url-pattern>/UserList</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>cn.edu.nsu.bookshop.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/Admin/User/*</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+
+  <filter>
+  <filter-name>LoginFilter</filter-name>
+  <filter-class>package cn.edu.nsu.bookshop.filter.Loginfilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  <filter-name>LoginFilter</filter-name>
+  <url-pattern>/Admin/*</url-pattern>
+  </filter-mapping>
+
+  
+</web-app>
